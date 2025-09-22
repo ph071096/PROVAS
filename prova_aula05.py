@@ -5,6 +5,8 @@
 
 quantidade_aluno = int(input('Digite a quantidade de alunos: '))
 
+resultados = []
+
 for _ in range(quantidade_aluno):
     nome = input('Nome do aluno: ')
     notas = []
@@ -15,8 +17,17 @@ for _ in range(quantidade_aluno):
     media = sum(notas) / 3
     status = 'Aprovado' if media >= 7.0 else 'Reprovado'
 
+    resultados.append({
+        'nome': nome,
+        'notas': notas,
+        'media': media,
+        'status': status
+    })
+
+print('-' * 40)
+for r in resultados:
+    print(f"Aluno: {r['nome']}")
+    print(f"Notas: {r['notas'][0]:.1f}, {r['notas'][1]:.1f}, {r['notas'][2]:.1f}")
+    print(f"Média: {r['media']:.2f}")
+    print(f"Status: {r['status']}")
     print('-' * 40)
-    print(f'Aluno: {nome}')
-    print(f"Notas: {notas[0]:.1f}, {notas[1]:.1f}, {notas[2]:.1f}")
-    print(f"Média: {media:.2f}")
-    print(f"Status: {status}")
