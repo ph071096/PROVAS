@@ -7,10 +7,10 @@ intervalo2 = int(input('Digite o segundo intervalo: ')) + 1
 pares = 0
 
 for i in range(intervalo1, intervalo2):
-    if i % 2 != 0:
-        print(f'{i} é impar, Soma dos pares: {pares}')
-        print('-' * 40)
-    else:
+    if i % 2 == 0:
         pares += i
         print(f'{i} é par, Soma dos pares: {pares}')
+        print('-' * 40)
+    else:
+        print(f'{i} é impar, Soma dos pares: {pares}')
         print('-' * 40)
