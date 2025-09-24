@@ -1,2 +1,2 @@
-# LPIA - Logica da Programação com IA
+# Leia-me
 Provas e anotações
